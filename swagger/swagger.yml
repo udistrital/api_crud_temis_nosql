@@ -1,0 +1,275 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /entidadcuotaspartes/:
+    get:
+      tags:
+      - entidadcuotaspartes
+      description: get all objects
+      operationId: EntidadCuotasPartesController.GetAll
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EntidadCuotasPartes'
+        "403":
+          description: :objectId is empty
+    post:
+      tags:
+      - entidadcuotaspartes
+      description: Crear EntidadCuotasPartes
+      operationId: EntidadCuotasPartesController.Crear EntidadCuotasPartes
+      parameters:
+      - in: body
+        name: body
+        description: Body para la creacion de EntidadCuotasPartes
+        required: true
+        schema:
+          $ref: '#/definitions/models.EntidadCuotasPartes'
+      responses:
+        "200":
+          description: '{int} EntidadCuotasPartes.Id'
+        "403":
+          description: body is empty
+  /entidadcuotaspartes/{objectId}:
+    put:
+      tags:
+      - entidadcuotaspartes
+      description: update the EntidadCuotasPartes
+      operationId: EntidadCuotasPartesController.Update
+      parameters:
+      - in: path
+        name: objectId
+        description: The objectid you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: The body
+        required: true
+        schema:
+          $ref: '#/definitions/.Object'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.Object'
+        "403":
+          description: :objectId is empty
+    delete:
+      tags:
+      - entidadcuotaspartes
+      description: Borrar EntidadCuotasPartes
+      operationId: EntidadCuotasPartesController.Borrar EntidadCuotasPartes
+      parameters:
+      - in: path
+        name: objectId
+        description: El ObjectId del objeto que se quiere borrar
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} ok'
+        "403":
+          description: objectId is empty
+  /ipc/:
+    get:
+      tags:
+      - ipc
+      description: get all objects
+      operationId: IpcController.GetAll
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Ipc'
+        "403":
+          description: :objectId is empty
+    post:
+      tags:
+      - ipc
+      description: Crear Ipc
+      operationId: IpcController.Crear Ipc
+      parameters:
+      - in: body
+        name: body
+        description: Body para la creacion de Ipc
+        required: true
+        schema:
+          $ref: '#/definitions/models.Ipc'
+      responses:
+        "200":
+          description: '{int} Ipc.Id'
+        "403":
+          description: body is empty
+  /ipc/{objectId}:
+    put:
+      tags:
+      - ipc
+      description: update the Ipc
+      operationId: IpcController.Update
+      parameters:
+      - in: path
+        name: objectId
+        description: The objectid you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: The body
+        required: true
+        schema:
+          $ref: '#/definitions/.Object'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.Object'
+        "403":
+          description: :objectId is empty
+    delete:
+      tags:
+      - ipc
+      description: Borrar Ipc
+      operationId: IpcController.Borrar Ipc
+      parameters:
+      - in: path
+        name: objectId
+        description: El ObjectId del objeto que se quiere borrar
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} ok'
+        "403":
+          description: objectId is empty
+  /rolentidadcuotaspartes/:
+    get:
+      tags:
+      - rolentidadcuotaspartes
+      description: get all objects
+      operationId: RolEntidadCuotasPartesController.GetAll
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.RolEntidadCuotasPartes'
+        "403":
+          description: :objectId is empty
+    post:
+      tags:
+      - rolentidadcuotaspartes
+      description: Crear RolEntidadCuotasPartes
+      operationId: RolEntidadCuotasPartesController.Crear RolEntidadCuotasPartes
+      parameters:
+      - in: body
+        name: body
+        description: Body para la creacion de RolEntidadCuotasPartes
+        required: true
+        schema:
+          $ref: '#/definitions/models.RolEntidadCuotasPartes'
+      responses:
+        "200":
+          description: '{int} RolEntidadCuotasPartes.Id'
+        "403":
+          description: body is empty
+  /rolentidadcuotaspartes/{objectId}:
+    put:
+      tags:
+      - rolentidadcuotaspartes
+      description: update the RolEntidadCuotasPartes
+      operationId: RolEntidadCuotasPartesController.Update
+      parameters:
+      - in: path
+        name: objectId
+        description: The objectid you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: The body
+        required: true
+        schema:
+          $ref: '#/definitions/.Object'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.Object'
+        "403":
+          description: :objectId is empty
+    delete:
+      tags:
+      - rolentidadcuotaspartes
+      description: Borrar RolEntidadCuotasPartes
+      operationId: RolEntidadCuotasPartesController.Borrar RolEntidadCuotasPartes
+      parameters:
+      - in: path
+        name: objectId
+        description: El ObjectId del objeto que se quiere borrar
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} ok'
+        "403":
+          description: objectId is empty
+definitions:
+  .Object:
+    type: object
+  .ObjectId:
+    type: object
+  models.EntidadCuotasPartes:
+    title: EntidadCuotasPartes
+    type: object
+    properties:
+      _id:
+        $ref: '#/definitions/bson.ObjectId'
+      idEntidad:
+        type: integer
+        format: int32
+      rolEntidad:
+        $ref: '#/definitions/models.RolEntidadCuotasPartes'
+      sucesor:
+        $ref: '#/definitions/bson.ObjectId'
+  models.Ipc:
+    title: Ipc
+    type: object
+    properties:
+      _id:
+        $ref: '#/definitions/bson.ObjectId'
+      valor:
+        type: number
+        format: float
+      vigencia:
+        type: string
+  models.RolEntidadCuotasPartes:
+    title: RolEntidadCuotasPartes
+    type: object
+    properties:
+      _id:
+        $ref: '#/definitions/bson.ObjectId'
+      descripcion:
+        type: string
+      nombre:
+        type: string
+tags:
+- name: ipc
+  description: |
+    Operaciones Crud Ipc
+- name: entidadcuotaspartes
+  description: |
+    Operaciones Crud EntidadCuotasPartes
+- name: rolentidadcuotaspartes
+  description: |
+    Operaciones Crud RolEntidadCuotasPartes
